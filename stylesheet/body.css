@@ -191,7 +191,7 @@
 
 /* Style inputs */
 input[type=text], select, textarea {
-  width: 100%;
+  width: 140%;
   padding: 12px;
   border: 1px solid #ccc;
   margin-top: 6px;
@@ -220,51 +220,47 @@ input[type=submit]:hover {
   box-shadow: 0 .2rem .5rem #0006;
 }
   
-.map, .form {
-  width: 50%;
-  height: 100%;
-}
 
-.form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
 
 /* Style the container/contact section */
 .contact_container {
   margin-top: 100px;
-  border-radius: 5px;
-  border-color: aqua;
   padding: 10px;
 }
 
 /* Create two columns that float next to eachother */
 .contact_column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
+
 
 /*Create a Google Map */
 .map {
-  width: 40%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 550px;
 }
 
+.form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 550px;
+}
 
 /* Clear floats after the columns */
-.contact_row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .contact_column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
+@media screen and (max-width: 1000px) {
+  .contact_column {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
