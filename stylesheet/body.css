@@ -119,23 +119,26 @@
   font-style: italic;
 }
 
+.service {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .service-desc {
   display: flex;
   flex-direction: row;
-  width: 560px;
-  margin-left: 100px;
   margin-top: 50px;
   margin-bottom: 50px;
-  align-content: center;
-  text-align: right;
+  width: 550px;
 }
 
 @media screen and (max-width: 1000px) {
-  .service-desc {
+  .service {
     float: none;
     display: flex;
     flex-direction: column;
-    margin-left: -10px;
+    align-items: center;
   }
   }
   
@@ -157,11 +160,6 @@
   margin-left: 40px;
 }
 
-.service {
-  display: flex;
-  flex-direction: row;
-  width: 700px;
-}
 
 .slide-content {
   display: flex;
@@ -214,11 +212,31 @@ input[type=submit]:hover {
   opacity: 0.8;
 }
 
+.contact {
+  height: 70vh;
+  width: 75vw;
+  border-radius: 1rem;
+  display: flex;
+  box-shadow: 0 .2rem .5rem #0006;
+}
+  
+.map, .form {
+  width: 50%;
+  height: 100%;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 /* Style the container/contact section */
 .contact_container {
   margin-top: 100px;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  border-color: aqua;
   padding: 10px;
 }
 
@@ -227,8 +245,14 @@ input[type=submit]:hover {
   float: left;
   width: 50%;
   margin-top: 6px;
-  padding: 20px;
+  padding: 30px;
 }
+
+/*Create a Google Map */
+.map {
+  width: 40%;
+}
+
 
 /* Clear floats after the columns */
 .contact_row:after {
