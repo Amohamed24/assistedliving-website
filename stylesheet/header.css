@@ -25,9 +25,10 @@
 
   .tab {
     color: white;
-    font-size: 18px;
+    font-size: 19px;
     transition: 0.s;
     cursor: pointer;
+
   }
 
   .tab:hover {
